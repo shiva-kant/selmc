@@ -20,7 +20,7 @@ public class ChromeTest {
   public void testOne() {
 	WebElement element=  webDriver.findElement(By.id("p"));
 	String response=element.getText();
-	assertEquals("Hello world", response);
+	assertEquals("Hello ", response);
   }
   
 }

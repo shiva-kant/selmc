@@ -11,12 +11,16 @@ public class ChromeTest {
 	WebDriver webDriver;
 	@BeforeClass
 	public void init() {
-		System.out.println("Hello");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\shivchou\\Desktop\\driver\\chromedriver.exe");
+  webDriver=new ChromeDriver();
+  webDriver.get("file:///C:/Users/shivchou/Documents/sel/selmaven/hello.html");
 	}
 	
   @Test
   public void testOne() {
-	System.out.println("Hello");
+	WebElement element=  webDriver.findElement(By.id("i1"));
+	String str=element.getText(); 
+	assertEquals("xyz",str);
   }
   
 }
